@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "h1 {\r\n    color: #369;\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    font-size: 250%;\r\n  }\r\n\r\nh2 {\r\n    text-align: center;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxXQUFXO0lBQ1gseUNBQXlDO0lBQ3pDLGVBQWU7RUFDakI7O0FBRUY7SUFDSSxrQkFBa0I7QUFDdEIiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbImgxIHtcclxuICAgIGNvbG9yOiAjMzY5O1xyXG4gICAgZm9udC1mYW1pbHk6IEFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWY7XHJcbiAgICBmb250LXNpemU6IDI1MCU7XHJcbiAgfVxyXG5cclxuaDIge1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59Il19 */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */"
 
 /***/ }),
 
@@ -41,7 +41,7 @@ module.exports = "h1 {\r\n    color: #369;\r\n    font-family: Arial, Helvetica,
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container is-fluid\">\r\n  <app-header [companyName]=\"companyName\"></app-header>\r\n\r\n  <div style=\"text-align:center\">\r\n    <h1>\r\n      {{ title }}\r\n    </h1>\r\n  </div>\r\n  <div class=\"spacing\"></div>\r\n  <h2>This website is currently under construction.</h2>\r\n  <h2>Please visit our blog at <a href=\"http://www.JRDMB.com\">www.JRDMB.com</a></h2>\r\n  <br />\r\n  <br />\r\n  <br />\r\n  <app-footer></app-footer>\r\n</div>"
+module.exports = "<div class=\"container is-fluid\">\r\n  <app-header [companyName]=\"companyName\"></app-header>\r\n  \r\n  <app-body\r\n  [companyName]=\"companyName\"\r\n  [title]=\"title\"></app-body>\r\n\r\n  <app-footer></app-footer>\r\n</div>"
 
 /***/ }),
 
@@ -94,6 +94,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _header_header_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./header/header.component */ "./src/app/header/header.component.ts");
 /* harmony import */ var _footer_footer_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./footer/footer.component */ "./src/app/footer/footer.component.ts");
+/* harmony import */ var _body_body_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./body/body.component */ "./src/app/body/body.component.ts");
+
 
 
 
@@ -108,7 +110,8 @@ var AppModule = /** @class */ (function () {
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
                 _header_header_component__WEBPACK_IMPORTED_MODULE_4__["HeaderComponent"],
-                _footer_footer_component__WEBPACK_IMPORTED_MODULE_5__["FooterComponent"]
+                _footer_footer_component__WEBPACK_IMPORTED_MODULE_5__["FooterComponent"],
+                _body_body_component__WEBPACK_IMPORTED_MODULE_6__["BodyComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"]
@@ -118,6 +121,70 @@ var AppModule = /** @class */ (function () {
         })
     ], AppModule);
     return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/body/body.component.css":
+/*!*****************************************!*\
+  !*** ./src/app/body/body.component.css ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "h1 {\r\n    color: #369;\r\n    font-family: Arial, Helvetica, sans-serif;\r\n    font-size: 250%;\r\n  }\r\n\r\nh2 {\r\n    text-align: center;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYm9keS9ib2R5LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxXQUFXO0lBQ1gseUNBQXlDO0lBQ3pDLGVBQWU7RUFDakI7O0FBRUY7SUFDSSxrQkFBa0I7QUFDdEIiLCJmaWxlIjoic3JjL2FwcC9ib2R5L2JvZHkuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbImgxIHtcclxuICAgIGNvbG9yOiAjMzY5O1xyXG4gICAgZm9udC1mYW1pbHk6IEFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWY7XHJcbiAgICBmb250LXNpemU6IDI1MCU7XHJcbiAgfVxyXG5cclxuaDIge1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59Il19 */"
+
+/***/ }),
+
+/***/ "./src/app/body/body.component.html":
+/*!******************************************!*\
+  !*** ./src/app/body/body.component.html ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div style=\"text-align:center\">\n  <h1>\n    {{ title }}\n  </h1>\n</div>\n<div class=\"spacing\"></div>\n<h2>This website is currently under construction.</h2>\n<h2>Please visit our blog at <a href=\"http://www.JRDMB.com\">www.JRDMB.com</a></h2>\n<br />\n<br />\n<br />\n\n<div class=\"columns\">\n  <div class=\"column\">\n    \n  </div>\n  <div class=\"column\">\n    \n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/body/body.component.ts":
+/*!****************************************!*\
+  !*** ./src/app/body/body.component.ts ***!
+  \****************************************/
+/*! exports provided: BodyComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BodyComponent", function() { return BodyComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var BodyComponent = /** @class */ (function () {
+    function BodyComponent() {
+    }
+    BodyComponent.prototype.ngOnInit = function () {
+    };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], BodyComponent.prototype, "companyName", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", String)
+    ], BodyComponent.prototype, "title", void 0);
+    BodyComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-body',
+            template: __webpack_require__(/*! ./body.component.html */ "./src/app/body/body.component.html"),
+            styles: [__webpack_require__(/*! ./body.component.css */ "./src/app/body/body.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], BodyComponent);
+    return BodyComponent;
 }());
 
 
@@ -198,7 +265,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- header -->\n<nav class=\"navbar is-light\">\n\n  <!-- logo -->\n  <div class=\"navbar-brand\">\n    <a class=\"navbar-item\">\n      <img onmousedown=\"return false;\" src=\"web/assets/img/JRLogo.png\"> \n      {{ companyName }}\n    </a>\n  </div>\n\n  <div id=\"navbarMenu\" class=\"navbar-menu\">\n      <div class=\"navbar-start\">\n          <a class=\"navbar-item\">\n              Home\n          </a>\n          \n          <a class=\"navbar-item\">\n              Products\n          </a>\n          \n          <div class=\"navbar-item has-dropdown is-hoverable\">\n              <a class=\"navbar-link\">\n                  More\n              </a>\n\n              <div class=\"navbar-dropdown\">\n                  <a class=\"navbar-item\">\n                      About Us\n                  </a>\n\n                  <a class=\"navbar-item\">\n                      Contact Us\n                  </a>\n              </div>\n          </div>\n      </div>\n  </div>\n\n  <div class=\"navbar-end\">\n      <div class=\"navbar-item\">\n        <div class=\"buttons\">\n          <a class=\"button is-light\" href=\"http://www.JRDMB.com\">\n            Blog\n          </a>\n        </div>\n      </div>\n    </div>\n</nav>\n"
+module.exports = "<!-- header -->\n<nav class=\"navbar is-light\" role=\"navigation\" aria-label=\"main navigation\">\n\n  <!-- logo -->\n  <div class=\"navbar-brand\">\n    <a class=\"navbar-item\" href=\"/\">\n      <img onmousedown=\"return false;\" src=\"web/assets/img/JRLogo.png\">\n      {{ companyName }}\n    </a>\n\n    <a role=\"button\" class=\"navbar-burger\" aria-label=\"menu\" aria-expanded=\"false\" data-target=\"navbarMain\">\n      <span aria-hidden=\"true\"></span>\n      <span aria-hidden=\"true\"></span>\n      <span aria-hidden=\"true\"></span>\n    </a>\n  </div>\n\n  <!-- main menu -->\n  <div id=\"navbarMain\" class=\"navbar-menu\">\n    <div class=\"navbar-start\">\n      <a class=\"navbar-item\">\n        Home\n      </a>\n\n      <a class=\"navbar-item\">\n        Products\n      </a>\n\n      <div class=\"navbar-item has-dropdown is-hoverable\">\n        <a class=\"navbar-link\">\n          More\n        </a>\n\n        <div class=\"navbar-dropdown\">\n          <a class=\"navbar-item\">\n            About Us\n          </a>\n\n          <a class=\"navbar-item\">\n            Contact Us\n          </a>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <!-- right menu -->\n  <div class=\"navbar-end\">\n    <div class=\"navbar-item\">\n      <div class=\"buttons\">\n        <a class=\"button is-light\" href=\"http://www.JRDMB.com\">\n          Blog\n        </a>\n      </div>\n    </div>\n  </div>\n</nav>"
 
 /***/ }),
 
