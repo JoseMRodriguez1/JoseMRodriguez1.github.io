@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-footer',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  currentYear: string;
+
+  constructor(private datePipe: DatePipe) {
+    this.currentYear = this.datePipe.transform(new Date(), 'yyyy');
+  }
 
   ngOnInit() {
   }
