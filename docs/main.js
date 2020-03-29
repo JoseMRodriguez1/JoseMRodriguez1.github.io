@@ -48,7 +48,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- header -->\n<nav class=\"navbar is-light\" role=\"navigation\" aria-label=\"main navigation\">\n\n  <!-- logo -->\n  <div class=\"navbar-brand\">\n    <a class=\"navbar-item\" href=\"/\">\n      <img onmousedown=\"return false;\" src=\"docs/assets/img/JRLogo.png\">\n      {{ companyName }}\n    </a>\n\n    <a role=\"button\" class=\"navbar-burger\" aria-label=\"menu\" aria-expanded=\"false\" data-target=\"navbarMain\">\n      <span aria-hidden=\"true\"></span>\n      <span aria-hidden=\"true\"></span>\n      <span aria-hidden=\"true\"></span>\n    </a>\n  </div>\n\n  <!-- main menu -->\n  <div id=\"navbarMain\" class=\"navbar-menu\">\n    <div class=\"navbar-start\">\n      <a class=\"navbar-item\">\n        Home\n      </a>\n\n      <a class=\"navbar-item\">\n        Products\n      </a>\n\n      <div class=\"navbar-item has-dropdown is-hoverable\">\n        <a class=\"navbar-link\">\n          More\n        </a>\n\n        <div class=\"navbar-dropdown\">\n          <a class=\"navbar-item\">\n            About Us\n          </a>\n\n          <a class=\"navbar-item\">\n            Contact Us\n          </a>\n        </div>\n      </div>\n\n      <a class=\"navbar-item is-hidden-desktop\" href=\"http://www.JRDMB.com\">\n        Blog\n      </a>\n    </div>\n  </div>\n\n  <!-- right menu -->\n  <div class=\"navbar-end\">\n    <div class=\"navbar-item is-hidden-touch\">\n      <div class=\"buttons\">\n        <a class=\"button is-light\" href=\"http://www.JRDMB.com\">\n          Blog\n        </a>\n      </div>\n    </div>\n  </div>\n</nav>");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- header -->\n<nav class=\"navbar is-light\" role=\"navigation\" aria-label=\"main navigation\">\n\n  <!-- logo -->\n  <div class=\"navbar-brand\">\n    <a class=\"navbar-item\" href=\"/\">\n      <img onmousedown=\"return false;\" src=\"docs/assets/img/JRLogo.png\">\n      {{ companyName }}\n    </a>\n\n    <a (click)=\"toggleNavbar()\" role=\"button\" class=\"navbar-burger\" #navBurger aria-label=\"menu\" aria-expanded=\"false\" data-target=\"navbarMain\">\n      <span aria-hidden=\"true\"></span>\n      <span aria-hidden=\"true\"></span>\n      <span aria-hidden=\"true\"></span>\n    </a>\n  </div>\n\n  <!-- main menu -->\n  <div id=\"navbarMain\" class=\"navbar-menu\" #navMenu>\n    <div class=\"navbar-start\">\n      <a class=\"navbar-item\">\n        Home\n      </a>\n\n      <a class=\"navbar-item\">\n        Products\n      </a>\n\n      <div class=\"navbar-item has-dropdown is-hoverable\">\n        <a class=\"navbar-link\">\n          More\n        </a>\n\n        <div class=\"navbar-dropdown\">\n          <a class=\"navbar-item\">\n            About Us\n          </a>\n\n          <a class=\"navbar-item\">\n            Contact Us\n          </a>\n        </div>\n      </div>\n\n      <a class=\"navbar-item is-hidden-desktop\" href=\"http://www.JRDMB.com\">\n        Blog\n      </a>\n    </div>\n  </div>\n\n  <!-- right menu -->\n  <div class=\"navbar-end\">\n    <div class=\"navbar-item is-hidden-touch\">\n      <div class=\"buttons\">\n        <a class=\"button is-light\" href=\"http://www.JRDMB.com\">\n          Blog\n        </a>\n      </div>\n    </div>\n  </div>\n</nav>");
 
 /***/ }),
 
@@ -561,6 +561,18 @@ var HeaderComponent = /** @class */ (function () {
     }
     HeaderComponent.prototype.ngOnInit = function () {
     };
+    HeaderComponent.prototype.toggleNavbar = function () {
+        this.navBurger.nativeElement.classList.toggle('is-active');
+        this.navMenu.nativeElement.classList.toggle('is-active');
+    };
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('navBurger'),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"])
+    ], HeaderComponent.prototype, "navBurger", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('navMenu'),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"])
+    ], HeaderComponent.prototype, "navMenu", void 0);
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
         Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)

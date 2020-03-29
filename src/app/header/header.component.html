@@ -8,7 +8,7 @@
       {{ companyName }}
     </a>
 
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
+    <a (click)="toggleNavbar()" role="button" class="navbar-burger" #navBurger aria-label="menu" aria-expanded="false" data-target="navbarMain">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
@@ -16,7 +16,7 @@
   </div>
 
   <!-- main menu -->
-  <div id="navbarMain" class="navbar-menu">
+  <div id="navbarMain" class="navbar-menu" #navMenu>
     <div class="navbar-start">
       <a class="navbar-item">
         Home
