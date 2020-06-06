@@ -3,19 +3,17 @@ import { DatePipe } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { BodyComponent } from './body/body.component';
+import { JrseModule } from './jrse/jrse.module';
+import { RoutingModule } from './routing/routing.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    BodyComponent
+    AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    JrseModule,
+    RoutingModule
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]
