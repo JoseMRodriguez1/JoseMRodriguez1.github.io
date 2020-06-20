@@ -7,7 +7,17 @@ const routes: Routes = [
   {
     path: '',
     component: HomeComponent
-  }
+  },
+  {
+    path: 'img/products/:image',
+    component: HomeComponent,
+    resolve: {
+        url: 'productsUrlRedirectResolver'
+    },
+    data: {
+        externalUrl: 'docs'
+    }
+}
 ];
 
 @NgModule({

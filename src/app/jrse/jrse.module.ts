@@ -5,7 +5,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { JrseRoutingModule } from './jrse-routing/jrse-routing.module';
 import { JrseBodyModule } from './jrse-body/jrse-body.module';
-import { RouterModule } from '@angular/router';
+import { RouterModule, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 
 @NgModule({
   declarations: [HomeComponent, HeaderComponent, FooterComponent],
@@ -15,6 +15,14 @@ import { RouterModule } from '@angular/router';
     JrseBodyModule,
     JrseRoutingModule,
     RouterModule
+  ],
+  providers: [
+    {
+      provide: 'productsUrlRedirectResolver',
+      useValue: (route: ActivatedRouteSnapshot, state: RouterStateSnapshot) => {
+          window.location.href = 'docs/assets/img/products/' + route.paramMap.get('image');
+      }
+  }
   ]
 })
 export class JrseModule { }
